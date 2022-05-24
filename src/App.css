@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+.header {
+  background-color: #5e6069;
+  padding: 2rem 0;
+  text-align: center;
+}
+header > a {
+  color: white;
+  text-decoration: none;
+  padding: 0 1rem;
+}
+header > a:hover {
+  color: #f1c40f;
+  text-decoration: underline;
+  transition: 1s;
+}
+
