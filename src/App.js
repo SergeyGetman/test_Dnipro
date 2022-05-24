@@ -4,6 +4,7 @@ import {Link, Route, Router, Switch} from "react-router-dom";
 import {Table} from "./components/Table";
 import {Navigations} from "./components/Navigations";
 import { Routing } from "./routing/Routing";
+import {Button} from "./components/tables/Button";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
               <Switch>
                   <Route exact path="/">
                      <h1>This is Home Page </h1>
+                      <Button />
                   </Route>
                   <Route exact path="/firstpage">
                       <Table />
