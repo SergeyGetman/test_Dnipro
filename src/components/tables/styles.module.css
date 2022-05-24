@@ -68,3 +68,7 @@ input {
     text-align: center;
     margin: 6px;
 }
+.grid__item:hover{
+    cursor: pointer;
+    background-color: #92a1a1;
+}

@@ -7,5 +7,11 @@ export const Routing = {
         nameFirstPage : 'Homepage',
         nameSecondPage : "Tables",
         nameThirdPage : "Some..."
+    },
+    tableName : {
+        Select : 'Select',
+        Name : 'Name',
+        Size : 'Size',
+        Date : 'Date'
     }
 }
