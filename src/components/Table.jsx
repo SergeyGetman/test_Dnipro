@@ -2,32 +2,42 @@ import React, {useEffect} from 'react';
 import cl from './tables/styles.module.css'
 import {Routing} from "../routing/Routing";
 import {useTitle} from "../Hooks/useTitle";
+import {UseGetDAte} from "../Hooks/useGetDAte";
+import {Checkbox} from "./Checkbox";
+import GetData from "./GetData";
 
-
-const arr = ['mama', 'papa', 'baba', 'deda']
 
 export const Table = () => {
 
     const {users} = useTitle()
     const {tableName } = Routing;
 
-
     return (
             <div className={cl.grid__container}>
                 <div className={cl.grid__item}>{tableName.Select}
-                    <input type="checkbox"/>
-                    <input type="checkbox"/>
-                    <input type="checkbox"/>
-                    <input type="checkbox"/>
+                    {users?.map( () => {
+                        return <Checkbox />
+                    })}
                 </div>
                 <div className={cl.grid__item}>
                     {tableName.Name}
-                    {arr.map((e, idx) => {
-                        return <div key={idx} className={cl.grid__item}>{e}</div>
+                    {users?.map((e, idx) => {
+                        return <div className={cl.grid__item} key={idx}>{e.name}</div>
                     })}
                     </div>
-                <div className={cl.grid__item}>{tableName.Size}</div>
-                <div className={cl.grid__item}>{tableName.Date}</div>
+                <div className={cl.grid__item}>{tableName.Size}
+                    {users?.map((e, idx) => {
+                        return <div className={cl.grid__item} key={idx}>{e.name}</div>
+                    })}
+                </div>
+                <div className={cl.grid__item}>{tableName.Date}
+                    {users?.map(() => {
+
+                        return <div className={cl.grid__item}>
+                            <GetData />
+                        </div>
+                    })}
+                </div>
         </div>
     );
 };
