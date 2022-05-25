@@ -52,4 +52,10 @@ header > a:hover {
   text-decoration: underline;
   transition: 1s;
 }
-
+.data{
+  color: #e6f600;
+  position: absolute;
+  margin-left: 20px;
+  margin-top: -20px;
+  font-weight: bold;
+}

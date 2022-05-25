@@ -11,7 +11,7 @@ export const Routing = {
     tableName : {
         Select : 'Select',
         Name : 'Name',
-        Size : 'Size',
-        Date : 'Date'
+        AllTabs : 'All Tabs',
+        FullName : 'Full Name'
     }
 }

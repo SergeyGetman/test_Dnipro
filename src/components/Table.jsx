@@ -2,8 +2,8 @@ import React, {useEffect, useState} from 'react';
 import cl from './tables/styles.module.css'
 import {Routing} from "../routing/Routing";
 import {useTitle} from "../Hooks/useTitle";
-import {UseGetDAte} from "../Hooks/useGetDAte";
 import {Checkbox} from "./Checkbox";
+import {Footer} from "./Footer";
 import GetData from "./GetData";
 
 
@@ -12,14 +12,14 @@ export const Table = () => {
     const { users } = useTitle()
     const { tableName } = Routing;
     const idx = 0;
-    console.log('this is users', users)
+
         useEffect(() => {
             setArr(users)
         },[users])
         const [arr, setArr] = useState( users || [] )
 
 
-    const result = arr?.map((element, index) => {
+    const fullName = arr?.map((element, index) => {
         return <div className={cl.table__inside} key={index} onClick={() => remove(index)}>
             {element.name}
         </div>;
@@ -38,13 +38,13 @@ export const Table = () => {
     return (
             <div className={cl.table__header}>
                 <div className={cl.table}>
-                    <div className={cl.table__name}>SELECT</div>
+                    <div className={cl.table__name}>{tableName.Select}</div>
                     {users?.map(() => {
                       return  <Checkbox />
                     })}
                 </div>
                 <div className={cl.table}>
-                   <div className={cl.table__name}>NAME</div>
+                   <div className={cl.table__name}>{tableName.AllTabs}</div>
                         {users?.map(e => {
                             return <div className={cl.table__inside}>
                                 <a href="#" className={cl.table__block}>{e.name + "+"}</a>
@@ -55,7 +55,7 @@ export const Table = () => {
                         })}
                 </div>
                 <div className={cl.table}>
-                    <div className={cl.table__name}>SIZE</div>
+                    <div className={cl.table__name}>{tableName.Name}</div>
                              <div className={cl.table__inside}>
                             <a href="#" className={cl.table__block}>{userName}</a>
                         </div>
@@ -63,12 +63,15 @@ export const Table = () => {
                 </div>
 
                 <div className={cl.table}>
-                    <div className={cl.table__name}>DATE</div>
+                    <div className={cl.table__name}>{tableName.FullName}</div>
                     <div className={cl.table__inside}>
-                        <a href="#" className={cl.table__block}>{result}</a>
+                        <a href="#" className={cl.table__block}>{fullName}</a>
                     </div>
                 </div>
-
+                <div className={cl.table__name}>
+                    <Footer/>
+                </div>
         </div>
+
     );
 };
