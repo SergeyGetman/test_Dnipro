@@ -11,64 +11,85 @@
     -webkit-transition: background 300ms ease-in-out;
     transition: background 300ms ease-in-out;
 }
+
 .fourth:hover {
     background-position: 0;
     background-color: #3e7aea;
     cursor: pointer;
 }
-.table {
+
+.table__header {
     display: grid;
-    border: 1px solid rgba(0, 0, 0, 0.8);
-    grid-template-columns: repeat(5, 1fr);
-    grid-column-gap: 30px;
-    background-color: #666970;
-    padding: 10px;
+    grid-template-columns: 100px repeat(3, 3fr);
+    background-color: #828078;
 }
 
-.table__title {
-    text-shadow: -1px -1px #000, 0 1px 0 #444;
+.table__header:hover {
+    display: grid;
+    grid-template-columns: 100px repeat(3, 3fr);
+    background-color: #828078;
+}
+
+.table {
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 2px;
+    text-align: center;
+}
+
+
+.table__block {
     color: #e8d8d8;
     transition: all 1s;
-    border: 1px solid black;
-}
-.table__title:hover {
-    text-shadow:
-            -1px -1px #000,
-            0 1px 0 #444;
-    color: #1A1A1A;
+    padding: 1px;
 }
 
-.grid-item {
-    display: grid;
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    font-size: 30px;
+.table__items__list {
+    position: absolute;
+    z-index: 100;
+    /* top: -40px; */
+    left: 345px;
+    background-color: #d92626;
+    padding: 10px;
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 50%);
+    transition: 0.3s;
+    opacity: .5;
+    transform: scaleY(0);
+    width: 100px;
+}
+
+.table__items__list > div:hover {
+   background-color: #5a5a5d;
+}
+
+.table__items__list::before {
+    z-index: 100;
+    content: "";
+    position: absolute;
+    top: -40px;
+    left: 0;
+    height: 50px;
+    width: 200px;
+}
+
+
+
+.table__name{
+    font-size: 20px;
+    color: #caee4d;
+    text-align: center;
+} 
+
+.table__inside:hover > .table__items__list{
+    transform: scaleY(1);
+    opacity: 1;
+    cursor: pointer;
+    color: #f5f7fa;
+    background-color: #828078;
     text-align: center;
 }
 
 input {
     display: flex;
-    margin: 28px;
+    margin: 18px;
 }
 
-.grid__container {
-    display: grid;
-    grid-column-gap: 20px;
-    border: 2px solid white;
-    grid-template-columns: 100px 300px 300px 300px;
-    background-color: #2196F3;
-
-}
-.grid__item {
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.8);
-    padding: 10px;
-    font-size: 20px;
-    text-align: center;
-    margin: 6px;
-}
-.grid__item:hover{
-    cursor: pointer;
-    background-color: #92a1a1;
-}

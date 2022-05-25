@@ -8,7 +8,7 @@ const GetData = () => {
 
     return (
        <>
-           {`${newDate[0]} ${newDate[1]} ${year}`}
+           {`${newDate[0]} ${month} ${newDate[1]} ${year}`}
        </>
     );
 };
