@@ -19,18 +19,21 @@ export const Table = () => {
         const [arr, setArr] = useState( users || [] )
 
 
-    console.log('this is arr', arr)
-
     const result = arr?.map((element, index) => {
         return <div className={cl.table__inside} key={index} onClick={() => remove(index)}>
             {element.name}
         </div>;
     });
 
+    const userName = arr?.map((element, index) => {
+        return <div className={cl.table__inside} key={index} onClick={() => remove(index)}>
+            {element.username}
+        </div>;
+    });
+
     const remove = (index) => {
         setArr([...arr?.slice(0, index), ...arr?.slice(index + 1)]);
     }
-
 
     return (
             <div className={cl.table__header}>
@@ -44,39 +47,26 @@ export const Table = () => {
                    <div className={cl.table__name}>NAME</div>
                         {users?.map(e => {
                             return <div className={cl.table__inside}>
-                                <a href="#" className={cl.table__block}>{e.name}</a>
+                                <a href="#" className={cl.table__block}>{e.name + "+"}</a>
                                 <div className={cl.table__items__list}>
-                                    <div onClick={() => remove(idx)}>DELETE</div>
-                                    <div onClick={() => alert("asdqwe")}>Thee</div>
-                      
+                                    <div onClick={() => remove(idx)}>Delete row</div>
                                 </div>
                             </div>
                         })}
                 </div>
                 <div className={cl.table}>
                     <div className={cl.table__name}>SIZE</div>
-                    {users?.map(e => {
-                        return <div className={cl.table__inside}>
-                            <a href="#" className={cl.table__block}>{e.username}</a>
+                             <div className={cl.table__inside}>
+                            <a href="#" className={cl.table__block}>{userName}</a>
                         </div>
-                    })}
-
 
                 </div>
 
-
-
                 <div className={cl.table}>
                     <div className={cl.table__name}>DATE</div>
-                    {users?.map( () => {
-                        return <div className={cl.table__inside}>
-                            <div className={cl.table__block}>
-                                < GetData/>
-                            </div>
-
-                        </div>
-
-                    })}
+                    <div className={cl.table__inside}>
+                        <a href="#" className={cl.table__block}>{result}</a>
+                    </div>
                 </div>
 
         </div>
