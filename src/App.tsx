@@ -15,6 +15,7 @@ function App() {
                 <Link to={Routing.firstPage}>{Routing.textTitle.nameSecondPage}</Link>
                 <Link to={Routing.secondPage}>{Routing.textTitle.nameThirdPage}</Link>
                 <div className='data'>
+                    this is data
                     <GetData />
                 </div>
 
