@@ -1,19 +1,19 @@
 {
+  "compileOnSave": false,
   "compilerOptions": {
-    "jsx": "react-jsx",
-    "allowSyntheticDefaultImports": true,
-    "plugins": [{ "name": "typescript-plugin-css-modules" }],
-    "preserveConstEnums": true,
-    "outFile": "../../built/local/tsc.js",
-    "sourceMap": true,
-    "target": "es6",
-    "module": "commonjs",
+    "jsx": "preserve",
+    "allowJs": true,
+    "checkJs": true,
+    // "strict": true,
+    "noEmit": true,
     "moduleResolution": "node",
-    "noResolve": false,
-    "noImplicitAny": false,
-    "removeComments": true,
-    "allowJs": true
+    "target": "ESNext",
+    "module": "esnext",
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "downlevelIteration": true
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "**/*.spec.ts"]
+  "typeAcquisition": {
+    "enable": true
+  }
 }

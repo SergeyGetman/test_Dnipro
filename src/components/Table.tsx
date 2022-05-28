@@ -10,7 +10,6 @@ export const Table = () => {
 
     const { users } = useTitle()
     const { tableName } = Routing;
-    const idx = 0;
 
         useEffect(() => {
             setArr(users)
@@ -44,8 +43,8 @@ export const Table = () => {
                 </div>
                 <div className={cl.table}>
                    <div className={cl.table__name}>{tableName.AllTabs}</div>
-                        {users?.map(e => {
-                            return <div className={cl.table__inside}>
+                        {users?.map((e, idx ) => {
+                            return <div key={idx} className={cl.table__inside}>
                                 <a href="#" className={cl.table__block}>{e.name + "+"}</a>
                                 <div className={cl.table__items__list}>
                                     <div onClick={() => remove(idx)}>Delete row</div>
