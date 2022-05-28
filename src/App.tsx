@@ -1,6 +1,6 @@
 import React from "react";
 import './App.css';
-import {Link, Route, Router, Switch} from "react-router-dom";
+import {Link, Route, Switch} from "react-router-dom";
 import {Table} from "./components/Table";
 import {Navigations} from "./components/Navigations";
 import { Routing } from "./routing/Routing";
@@ -9,10 +9,8 @@ import GetData from "./components/GetData";
 
 function App() {
   return (
+
         <div >
-
-
-
             <header className="header">
                 <Link to={Routing.home}>{Routing.textTitle.nameFirstPage}</Link>
                 <Link to={Routing.firstPage}>{Routing.textTitle.nameSecondPage}</Link>

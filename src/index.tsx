@@ -12,6 +12,5 @@ ReactDOM.render(
         <Route path='/' component={App} />
         </Router>
     </BrowserRouter>,
-
     document.getElementById('root')
 );
