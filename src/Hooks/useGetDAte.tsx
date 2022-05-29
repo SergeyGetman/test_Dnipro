@@ -7,9 +7,6 @@ export const UseGetDAte = () : TDate => {
     const month = newDate.getMonth() + 1;
     const year = newDate.getFullYear();
 
-    console.log('this is newDate', newDate)
-
-
     return {
         newDate,
         month,
