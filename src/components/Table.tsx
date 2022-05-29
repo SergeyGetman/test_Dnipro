@@ -41,6 +41,7 @@ export const Table = () => {
                       return  <Checkbox />
                     })}
                 </div>
+                This is table:
                 <div className={cl.table}>
                    <div className={cl.table__name}>{tableName.AllTabs}</div>
                         {users?.map((e, idx ) => {
