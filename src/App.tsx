@@ -6,6 +6,7 @@ import { Navigations } from "./components/Navigations";
 import { Routing } from "./routing/Routing";
 import { Button } from "./components/tables/Button";
 import GetData from "./components/GetData";
+import { BsBarChartLine } from "react-icons/bs";
 
 function App() {
   return (
@@ -14,9 +15,12 @@ function App() {
                 <Link to={Routing.home}>{Routing.textTitle.nameFirstPage}</Link>
                 <Link to={Routing.firstPage}>{Routing.textTitle.nameSecondPage}</Link>
                 <Link to={Routing.secondPage}>{Routing.textTitle.nameThirdPage}</Link>
+                <Link to={Routing.secondPage}>{Routing.textTitle.testedPage}</Link>
                 <div className='data'>
                     this is data
                     <GetData />
+                    <BsBarChartLine />
+
                 </div>
 
             </header>

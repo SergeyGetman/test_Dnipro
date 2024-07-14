@@ -3,10 +3,12 @@ export const Routing = {
     firstPage : '/firstpage',
     secondPage : '/dashboard',
 
+
     textTitle : {
         nameFirstPage : 'Homepage',
         nameSecondPage : "Tables",
-        nameThirdPage : "Some..."
+        nameThirdPage : "Some...",
+        testedPage: 'Tested',
     },
     tableName : {
         Select : 'Select',

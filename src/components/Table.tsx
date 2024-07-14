@@ -37,8 +37,11 @@ export const Table = () => {
             <div className={cl.table__header}>
                 <div className={cl.table}>
                     <div className={cl.table__name}>{tableName.Select}</div>
-                    {users?.map(() => {
-                      return  <Checkbox />
+                    {users?.map((el, idx) => {
+                      return <>
+
+                          <Checkbox  key={idx} />
+                      </>
                     })}
                 </div>
                 This is table:
