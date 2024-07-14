@@ -2,12 +2,14 @@ export const Routing = {
     home : "/",
     firstPage : '/firstpage',
     secondPage : '/dashboard',
+    someMuiPage: '/some',
+    testedPage: '/tested',
 
 
     textTitle : {
         nameFirstPage : 'Homepage',
         nameSecondPage : "Tables",
-        nameThirdPage : "Some...",
+        nameThirdPage : "Navigations",
         testedPage: 'Tested',
     },
     tableName : {

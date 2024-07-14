@@ -8,6 +8,8 @@ import { Button } from "./components/tables/Button";
 import GetData from "./components/GetData";
 import { ArrowRight } from 'react-bootstrap-icons';
 import { ReactComponent as AdIcon }  from './images/more.svg'
+import TestedMui from "./components/TestedMui";
+import {Container} from "@mui/material";
 
 function App() {
   return (
@@ -16,9 +18,9 @@ function App() {
                 <Link to={Routing.home}>{Routing.textTitle.nameFirstPage}</Link>
                 <Link to={Routing.firstPage}>{Routing.textTitle.nameSecondPage}</Link>
                 <Link to={Routing.secondPage}>{Routing.textTitle.nameThirdPage}</Link>
-                <Link to={Routing.secondPage}>{Routing.textTitle.testedPage}</Link>
+                <Link to={Routing.testedPage}>{Routing.textTitle.testedPage}</Link>
                 <div className='data'>
-                    this is data
+                    data:
                     <GetData />
                     <ArrowRight  />
 
@@ -29,19 +31,28 @@ function App() {
 
             </header>
 
+            <Container>
+                <Switch>
+                    <Route exact path="/">
+                        <h1>This is Home Page </h1>
+                        <Button />
+                    </Route>
+                    <Route exact path="/firstpage">
+                        <Table />
+                    </Route>
+                    <Route exact path="/dashboard">
+                        <Navigations />
+                    </Route>
 
-              <Switch>
-                  <Route exact path="/">
-                     <h1>This is Home Page </h1>
-                      <Button />
-                  </Route>
-                  <Route exact path="/firstpage">
-                      <Table />
-                  </Route>
-                  <Route exact path="/dashboard">
-                      <Navigations />
-                  </Route>
-              </Switch>
+                    <Route exact path="/tested">
+                        <TestedMui />
+                    </Route>
+                </Switch>
+            </Container>
+
+
+
+
       </div>
 
   );
