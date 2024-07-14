@@ -15,5 +15,6 @@
   },
   "typeAcquisition": {
     "enable": true
-  }
+  },
+  "include": ["src", "declarations.d.ts"]
 }

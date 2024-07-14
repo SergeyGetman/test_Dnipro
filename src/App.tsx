@@ -6,7 +6,8 @@ import { Navigations } from "./components/Navigations";
 import { Routing } from "./routing/Routing";
 import { Button } from "./components/tables/Button";
 import GetData from "./components/GetData";
-import { BsBarChartLine } from "react-icons/bs";
+import { ArrowRight } from 'react-bootstrap-icons';
+import { ReactComponent as AdIcon }  from './images/more.svg'
 
 function App() {
   return (
@@ -19,8 +20,11 @@ function App() {
                 <div className='data'>
                     this is data
                     <GetData />
-                    <BsBarChartLine />
+                    <ArrowRight  />
 
+                </div>
+                <div>
+                    <AdIcon />
                 </div>
 
             </header>
